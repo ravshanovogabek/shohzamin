@@ -1,0 +1,141 @@
+/* Footer Container Styling */
+.footer-container {
+    background-image: url('../../assets/images/footer3.jpg'); /* Background image */
+    background-size: cover;  /* Ensure full background cover */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* No repetition of the image */
+    background-attachment: scroll; /* Scroll the background with the page */
+    height: auto; /* Auto height to expand with content */
+    min-height: 300px; /* Minimum height */
+    padding: 60px 0; /* Padding around the content */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Overlay Styling */
+.footer-overlay {
+    background-color: rgba(38, 183, 173, 0.85); /* Semi-transparent overlay */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer Content Styling */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+/* Footer Text Styling */
+.footer-text {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-titled {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: none;
+}
+
+.footer-subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Footer Button Styling */
+.footer-button {
+    background-color: white;
+    color: #26a7b7;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevents text wrapping */
+    border: 2px solid rgb(9, 132, 132);
+}
+
+.footer-button:hover {
+    background-color: #10d2d2;
+}
+
+/* Footer Copyright Styling */
+.footer-copyright {
+    margin-top: 50px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 40px 0; /* Reduce padding for tablets */
+    }
+
+    .footer-titled {
+        font-size: 2rem; /* Reduce title font size for tablets */
+    }
+
+    .footer-subtitle {
+        font-size: 1rem; /* Adjust subtitle size */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack content vertically on mobile */
+        text-align: center; /* Center align text on mobile */
+    }
+
+    .footer-text {
+        text-align: center; /* Center the footer text */
+    }
+
+    .footer-button {
+        margin-top: 20px; /* Add space between text and button */
+        padding: 12px 25px; /* Adjust button padding for mobile */
+    }
+
+    .footer-titled {
+        font-size: 1.8rem; /* Smaller title for mobile */
+    }
+
+    .footer-subtitle {
+        font-size: 1rem; /* Smaller subtitle */
+    }
+
+    .footer-container {
+        padding: 30px 0; /* Reduce padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-titled {
+        font-size: 1.6rem; /* Further reduce font size for smaller screens */
+    }
+
+    .footer-subtitle {
+        font-size: 0.9rem; /* Smaller subtitle font size */
+    }
+
+    .footer-button {
+        font-size: 0.9rem; /* Reduce button font size */
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}

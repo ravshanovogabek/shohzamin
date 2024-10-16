@@ -1,0 +1,152 @@
+
+  
+  /* Container styling */
+  .reservation-container {
+    max-width: 1000px; /* Set a maximum width */
+    margin: 50px auto; /* Center the form */
+    padding: 30px; /* Add padding */
+    border-radius: 15px; /* More pronounced rounded corners */
+    
+    
+    animation: fadeIn 0.4s ease; /* Fade-in animation for the container */
+  }
+
+  
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Heading styling */
+  .hash {
+    text-align: center; /* Center the heading */
+    font-size: 28px; /* Increased font size */
+    color: #12b49e; /* Dark color */
+    margin-bottom: 20px; /* Space below heading */
+    letter-spacing: 1px; /* Spacing between letters */
+  }
+  
+  /* Form row styling */
+  .form-row {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    margin-bottom: 20px; /* Space between form rows */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    flex: 1; /* Allow flex items to grow */
+    margin-right: 10px; /* Space between groups */
+    opacity: 0; /* Initially hidden for animation */
+    animation: slideIn 0.4s forwards; /* Animation for form fields */
+  }
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Half-width for last item */
+  .half-width {
+    flex: 1 1 48%; /* Adjusted width */
+  }
+  
+  /* Full-width for destination and visa support */
+  .full-width {
+    flex: 1; /* Full width */
+  }
+  
+  /* Remove margin for the last item in row */
+  .form-row .form-group:last-child {
+    margin-right: 0; /* No right margin for the last item */
+  }
+
+  
+  
+  /* Label styling */
+  label {
+    display: block; /* Make label block level */
+    margin-bottom: 8px; /* Space below label */
+    font-weight: bold; /* Bold font */
+    color: #4a4a4a; /* Slightly darker gray */
+  }
+  
+  /* Input and select styling */
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  select {
+    width: 100%; /* Full width */
+    padding: 12px 15px; /* Increased padding */
+    border: 2px solid #12b49e; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+    background-color: #f9f9f9; /* Light background */
+  }
+  
+  /* Focus styles */
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #00b0b3; /* Darker blue on focus */
+    box-shadow: 0 0 5px rgba(0, 247, 255, 0.3); /* Subtle shadow */
+    outline: none; /* Remove outline */
+  }
+  
+  /* Button styling */
+  .butka {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding */
+    background-color: #12b49e; /* Primary color */
+    color: #fff; /* White text */
+    font-size: 18px; /* Font size */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effect */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+  }
+  
+  /* Button hover effect */
+  .butka:hover {
+    background-color: #077d85; /* Darker blue on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+  }
+
+  
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .reservation-container {
+      margin: 20px; /* Less margin on smaller screens */
+      padding: 20px; /* Adjust padding */
+    }
+    
+    .form-row {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    
+    .form-group {
+      margin-right: 0; /* No right margin on smaller screens */
+      margin-bottom: 15px; /* Space below each item */
+    }
+  }
+  

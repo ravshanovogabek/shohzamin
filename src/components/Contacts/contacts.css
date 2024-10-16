@@ -1,0 +1,181 @@
+/* Contact Section Styling */
+.contacts-section {
+  position: relative;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: white; 
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.65); 
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #dddddd;
+  margin-bottom: 30px;
+  border-top: 1px solid #00b5bf;
+  padding-top: 10px;
+}
+
+/* Discover Button */
+.discover-button {
+  background-color: #12b49e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: #1299b4;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Contact Options Layout */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.contact-card {
+  background-color: #ffffff; 
+  padding: 30px;
+  border: 2.5px solid rgb(0, 217, 255);
+  border-radius: 25px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 20px;
+}
+
+.contact-card p {
+  color: #555555;
+  margin-top: 10px;
+}
+
+/* Icon Styling */
+.contact-icon {
+  background-color: #12b49e;
+  color: white;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2.5px solid rgb(17, 193, 202);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  background-color: #1299b4;
+  transform: scale(1.1); /* Icon grows slightly on hover */
+}
+
+/* Map Section Styling */
+.map-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.map-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.map-section iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  width: 80%; /* Responsive width */
+  height: 300px;
+  max-width: 1000px; /* Ensures a max width on large screens */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .discover-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 36px; /* Smaller title for tablet screens */
+  }
+
+  .sub-title {
+    font-size: 18px;
+  }
+
+  .contact-card {
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .contact-options {
+    gap: 30px; /* Reduced gap for tablet screens */
+  }
+
+  .map-section iframe {
+    width: 90%; /* More responsive on smaller tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px; /* Smaller font size for mobile */
+  }
+
+  .sub-title {
+    font-size: 16px;
+  }
+
+  .contact-options {
+    flex-direction: column; /* Stacks contact cards on mobile */
+    gap: 20px;
+  }
+
+  .contact-card {
+    width: 90%; /* Full width on mobile */
+    margin-top: 20px;
+  }
+
+  .map-section iframe {
+    width: 100%; /* Full width for map on mobile */
+    height: 250px;
+  }
+}

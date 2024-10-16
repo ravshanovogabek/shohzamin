@@ -1,0 +1,198 @@
+/* Container for all locations */
+.locations-container {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Light background color */
+}
+
+/* Headings */
+.locations-heading {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #15b08f; /* Blue color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.locations-heading:hover {
+  color: #0bd7d7; /* Darker blue on hover */
+}
+
+.locations-subheading {
+  color: #adacac; /* Darker grey */
+  font-size: 1.2rem; /* Slightly larger */
+  margin-bottom: 30px;
+}
+
+/* Container for the location cards */
+.locations-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto; /* Horizontal scrolling for small screens */
+  padding-bottom: 20px;
+  padding: 14px;
+}
+
+/* Individual location card */
+.location-card {
+  width: 80px; /* Default width */
+  height: 430px;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent shrinking when inside a flex container */
+}
+
+/* Expanded card */
+.location-card.expanded {
+  width: 550px; /* Set a fixed width for the expanded card */
+}
+
+/* Background image for the location */
+.location-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+
+/* Info section */
+.location-info {
+  padding: 30px;
+  text-align: left;
+  border-radius: 0 0 20px 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slide up */
+  animation: fadeIn 0.3s forwards; /* Fade in effect */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading and population styles */
+.location-info h3 {
+  font-size: 1.6rem; /* Slightly larger */
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff; /* White color for text */
+}
+
+/* Population text */
+.location-info p {
+  font-size: 1rem; /* Larger font size */
+  color: #ddd; /* Lighter grey */
+  margin: 5px 0 0 0;
+}
+
+/* Hover effect for non-expanded cards */
+.location-card:not(.expanded):hover .location-image {
+  filter: brightness(0.85);
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Maximize icon */
+.maximize-icon {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  font-size: 2rem; /* Increased icon size */
+  color: rgb(17, 222, 195);
+  padding: 5px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Responsive Design for tablets and mobile devices */
+@media (max-width: 1024px) {
+  .location-card {
+    width: 150px; /* Adjusted width for tablets */
+    height: 350px;
+  }
+
+  .location-card.expanded {
+    width: 350px; /* Adjusted width for expanded card */
+  }
+
+  /* Adjust heading sizes for tablets */
+  .locations-heading {
+    font-size: 2rem; /* Smaller font for tablets */
+  }
+
+  .locations-cards {
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .location-info h3 {
+    font-size: 1.4rem; /* Adjust text size for better readability on tablets */
+  }
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+  .location-card {
+    width: 120px; /* Adjusted width for mobile */
+    height: 300px;
+  }
+
+  .location-card.expanded {
+    width: 50%; /* Full width for expanded card on mobile */
+    transform: translateX(0); /* Center the expanded card */
+  }
+
+  .locations-cards {
+    gap: 10px; /* Smaller gaps between cards */
+    padding: 10px; /* Reduced padding for better mobile spacing */
+  }
+
+  /* Adjust heading sizes */
+  .locations-heading {
+    font-size: 1.8rem; /* Smaller font for mobile */
+  }
+
+  .locations-subheading {
+    font-size: 1rem; /* Smaller subheading text on mobile */
+  }
+
+  .location-info h3 {
+    font-size: 1.3rem; /* Adjust title size for mobile */
+  }
+
+  .location-info p {
+    font-size: 0.9rem; /* Adjust population text size */
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .location-card {
+    width: 30px; /* Further reduced card size for very small screens */
+    height: 250px;
+  }
+
+  .locations-heading {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  .location-info h3 {
+    font-size: 1.1rem; /* Smaller text for small screens */
+  }
+
+  .location-info p {
+    font-size: 0.8rem;
+  }
+}

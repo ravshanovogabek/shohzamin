@@ -1,0 +1,77 @@
+/* Map Card Styling */
+.map-card {
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin: 18px auto;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Set a maximum width */
+  border: 3px solid rgb(13, 169, 143);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.map-card:hover {
+  transform: scale(1.02); /* Slight scale on hover */
+}
+
+/* Map Title Styling */
+.map-title {
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  color: #333; /* Title color */
+  background-color: #f4f4f4;
+  margin: 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Responsive iframe styling */
+iframe {
+  width: 100%; /* Full width iframe */
+  height: 500px; /* Default height for larger screens */
+  border-radius: 0;
+  border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .map-card {
+    max-width: 90%; /* Adjust max width for tablets */
+  }
+
+  .map-title {
+    font-size: 22px; /* Slightly smaller title */
+  }
+
+  iframe {
+    height: 400px; /* Adjust iframe height for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .map-card {
+    max-width: 95%; /* Full width for mobile */
+    margin: 20px auto;
+    
+  }
+
+  .map-title {
+    font-size: 20px; /* Smaller title for mobile */
+    padding: 12px;
+  }
+
+  iframe {
+    height: 300px; /* Reduce height for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .map-title {
+    font-size: 18px; /* Smaller title for extra small screens */
+  }
+
+  iframe {
+    height: 250px; /* Adjust iframe height for very small screens */
+  }
+}

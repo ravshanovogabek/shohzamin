@@ -1,0 +1,187 @@
+
+
+/* Floating chat button */
+.phone-button {
+    position: fixed;
+    bottom: 24px;
+    right: 36px;
+    width: 60px;
+    height: 60px;
+    background-color: #0a84ff; /* Flat material blue */
+    border-radius: 50%;
+    box-shadow: none; /* Remove the white shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform */
+    animation: glow 1.5s infinite alternate; /* Apply glowing animation */
+}
+
+/* Glowing animation keyframes */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #0a84ff, 0 0 10px #0a84ff, 0 0 15px #0a84ff, 0 0 20px #0a84ff; /* Initial state */
+    }
+    50% {
+        box-shadow: 0 0 5px #57ffe6, 0 0 10px #57fcff, 0 0 15px #57ffdb, 0 0 20px #57ffc4; /* Mid state (yellow glow) */
+    }
+    100% {
+        box-shadow: 0 0 5px #ff5757, 0 0 10px #ff5757, 0 0 15px #ff5757, 0 0 20px #ff5757; /* End state (red glow) */
+    }
+}
+
+.phone-button:hover {
+    transform: scale(1.1) rotate(3deg); /* Scale and slight rotation on hover */
+}
+
+.phone-button.open {
+    background-color: #ff5757; /* Soft red for close state */
+    transform: rotate(90deg); /* Rotate button when toggled open */
+}
+
+.phone-button:active {
+    transform: scale(0.95); /* Slight scale down on click */
+}
+
+/* Icon size adjustments */
+.phone-button .icon {
+    color: rgb(255, 255, 255);
+    font-size: 50px; /* Reduced size for the icon */
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 16px; /* Reduced size for close icon */
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Subtle grow on hover */
+}
+
+/* Chat box styling */
+.chat-box {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 360px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+}
+
+/* Chat box visibility */
+.chat-box.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Smooth slide-up effect */
+}
+
+/* Chat header styling */
+.chat-header {
+    background-color: #0a84ff;
+    color: white;
+    padding: 16px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Chat body */
+.chat-body {
+    padding: 20px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.chat-body p {
+    margin-bottom: 10px;
+    color: #666;
+    opacity: 0;
+    animation: fadeInText 0.8s ease-out 0.4s forwards; /* Delayed fade-in */
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Chat footer */
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    outline: none;
+    font-size: 14px;
+    position: relative; /* Position for pseudo-element */
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.chat-footer input:focus {
+    background-color: #e9e9e9;
+    transform: scale(1.02); /* Slight grow on focus */
+}
+
+.chat-footer button {
+    background-color: #0a84ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add border transition */
+}
+
+.chat-footer button:hover {
+    background-color: #006add;
+    transform: translateY(-3px); /* Subtle bounce effect */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .chat-box {
+        width: 90%;
+        right: 5%;
+        bottom: 80px;
+    }
+
+    .phone-button {
+        bottom: 20px;
+        right: 10px;
+    }
+}
